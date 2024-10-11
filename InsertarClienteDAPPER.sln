@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertarClienteDAPPER", "InsertarClienteDAPPER\InsertarClienteDAPPER.csproj", "{30D18325-3D84-4A84-8D72-E86608AAFD87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDATOS", "AccesoDATOS\AccesoDATOS.csproj", "{11F23098-3C22-44F4-A045-6A14BE4C02BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30D18325-3D84-4A84-8D72-E86608AAFD87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D18325-3D84-4A84-8D72-E86608AAFD87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D18325-3D84-4A84-8D72-E86608AAFD87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D18325-3D84-4A84-8D72-E86608AAFD87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11F23098-3C22-44F4-A045-6A14BE4C02BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F23098-3C22-44F4-A045-6A14BE4C02BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F23098-3C22-44F4-A045-6A14BE4C02BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F23098-3C22-44F4-A045-6A14BE4C02BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BCFF80C-1FCA-4B91-888A-9092FB5B6485}
+	EndGlobalSection
+EndGlobal
