@@ -10,18 +10,18 @@ namespace AccesoDATOS
 {
     internal class BaseDATOS
     {
-        public static string ConnectionString
+        public static string Connection
         {
             get
             {
                 return ConfigurationManager.
-                ConnectionStrings["NWConnectionString"].ConnectionString;
+                ConnectionStrings["NWConnection"].ConnectionString;
             }
         }
 
         public static SqlConnection GetSqlConnection()
         {
-            SqlConnection conexion = new SqlConnection(ConnectionString);
+            SqlConnection conexion = new SqlConnection(Connection);
             conexion.Open();
             return conexion;
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccesoDATOS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace InsertarClienteDAPPER
 {
     public partial class Form1 : Form
     {
+        RepositorioCliente clienteR = new RepositorioCliente();
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnObtenerTodos_Click(object sender, EventArgs e)
+        {
+            var cliente = clienteR.ObtenerTodo();
+            dgvClientes.DataSource = cliente;
         }
     }
 }
