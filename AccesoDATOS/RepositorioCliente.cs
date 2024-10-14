@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,5 +33,36 @@ namespace AccesoDATOS
             }
         }
 
+        public int insertarCliente(Clientes customer)
+        {
+            using (var conexion = BaseDATOS.GetSqlConnection())
+            {
+                String Insertar = "";
+                Insertar = Insertar + "INSERT INTO [dbo].[Customers] " + "\n";
+                Insertar = Insertar + "           ([CustomerID] " + "\n";
+                Insertar = Insertar + "           ,[CompanyName] " + "\n";
+                Insertar = Insertar + "           ,[ContactName] " + "\n";
+                Insertar = Insertar + "           ,[ContactTitle] " + "\n";
+                Insertar = Insertar + "           ,[Address]) " + "\n";
+                Insertar = Insertar + "     VALUES " + "\n";
+                Insertar = Insertar + "           (@customerID " + "\n";
+                Insertar = Insertar + "           ,@companyName " + "\n";
+                Insertar = Insertar + "           ,@contactName " + "\n";
+                Insertar = Insertar + "           ,@contactTitle " + "\n";
+                Insertar = Insertar + "           ,@address)";
+                var insertadas = conexion.Execute(Insertar, new
+                {
+                    customerID = customer.CustomerID,
+                    CompanyName = customer.CompanyName,
+                    ContactName = customer.ContactName,
+                    ContactTitle = customer.ContactTitle,
+                    Address = customer.Address,
+                });
+                return insertadas;
+            }
+             
+
+        }
+        
     }
 }
